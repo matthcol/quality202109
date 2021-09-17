@@ -1,0 +1,10 @@
+body {
+	background: #fbe8d7;
+	color: black;
+	font-size: large;
+	font-weight: normal;
+}
+
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}

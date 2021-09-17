@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" href="css/main.css">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+<body>
+    <h1>MOVIE DB</h1>
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('welcome')}}">Accueil</a></li>
+            <li><a href="{{ url_for('movies_range_year')}}">Recherche</a></li>
+         </ul>
+    </nav>
+    <div id="selection">
+     {% block selection %}
+    {% endblock %}
+    </div>
+    <div id="view">
+    {% block view %}
+    {% endblock %}
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+

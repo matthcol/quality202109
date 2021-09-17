@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+
+ {% block view %}
+    
+    <div>
+    <ul>
+        {% for title, year in liste_movies %}
+            <li>{{ title }} ({{ year }}) </li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

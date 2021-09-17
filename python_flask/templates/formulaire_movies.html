@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+ {% block view %}   
+        <h2>Filtrage movies</h2>
+        
+        <div>
+            <form action="{{ url_for('movies_range_year')}}" method="POST">
+              Date début :
+              <input type="text" name="start" value="{{ start_default }}"><br>
+              Date fin :
+              <input type="text" name="end" value="{{ end_default }}"><br>
+              <input type="submit" value="Envoyer">
+            </form>
+    
+        </div>
+{% endblock %}
