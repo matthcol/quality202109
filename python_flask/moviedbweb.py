@@ -7,8 +7,8 @@ Created on Wed Jul  4 08:59:35 2018
 
 from flask import Flask, render_template, url_for, request, redirect
 from datetime import date, datetime, timedelta
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import text
+#from flask_sqlalchemy import SQLAlchemy
+#from sqlalchemy import text
 #
 #import werkzeug.exceptions
 
