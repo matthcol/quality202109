@@ -31,16 +31,33 @@ def test_aire_triangle2(cotes):
     res = aire_triangle(a,b,c)
     assert res == aire_expected
 
-@pytest.mark.xfail
+# @pytest.mark.xfail
 @pytest.mark.aire_triangle    
 def test_aire_triangle_negatif():
     a,b,c = -10.0, 1.0, 1.0
-    aire_triangle(a,b,c)
-    assert True
+    with pytest.raises(ValueError) as exInfo:
+        aire_triangle(a,b,c)
+    assert str(exInfo.value) == "coté d'un triangle négatif ou nul"
+    # assert str(exInfo.value) == "math domain error"
 
 @pytest.mark.skip
 def test_aire_carre():
     assert True    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

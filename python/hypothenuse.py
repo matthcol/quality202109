@@ -10,5 +10,7 @@ from math import sqrt, hypot
 
 def hypothenuse(a,b):
     #return sqrt(a**2 + b**2) 
-    return hypot(a,  b)    
+    if a <= 0 or b<= 0:
+        raise ValueError("coté d'un triangle négatif ou nul")
+    return hypot(a,  b)
     

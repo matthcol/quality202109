@@ -26,7 +26,6 @@ liste_movies = [ ('Kate', 2021), ('Shang-Chi',2021),
 def welcome():
     return render_template('movies.html', liste_movies=liste_movies)
 
-#@app.route("/pittags_without_marker/<int:startdate>")
 @app.route("/movies_range_year",  methods=['GET','POST'])
 def movies_range_year():
     if request.method == 'GET':

@@ -66,7 +66,7 @@ class TestHypothenuse(unittest.TestCase):
             with self.subTest(a=a, b=b):
                 self.assertEquals(
                     hypothenuse(a, b),
-                    r+1)
+                    r)
                      
 if __name__ == '__main__':
     unittest.main() 

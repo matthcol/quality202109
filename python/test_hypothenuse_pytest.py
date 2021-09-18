@@ -63,6 +63,19 @@ def test_hypothenuse5(a,b, expected_res):
     assert res == expected_res
     
     
+@pytest.fixture
+def facts_hypot_echelle(request):
+    coeff = request.param
+    return (3.0*coeff, 4.0*coeff, 5.0*coeff)
+    
+
+@pytest.mark.parametrize("facts_hypot_echelle, x", [(3,1), (4,2)], 
+                         indirect = ["facts_hypot_echelle"])
+def test_hypothenuse6(facts_hypot_echelle, x):
+    a,b,expected_res = facts_hypot_echelle
+    res = hypothenuse(a,b)
+    assert res == expected_res
+    assert x in (1,2)
     
     
     
